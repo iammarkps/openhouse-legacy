@@ -15,18 +15,14 @@
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "antd": "^3.10.1",
-    "bulma": "^0.7.2",
     "next": "^7.0.1",
     "next-fonts": "^0.10.0",
-    "node-sass": "^4.9.4",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-rasta": "^1.0.4",
     "react-spring": "^5.9.2",
     "styled-components": "^4.0.0-beta.11.3"
   },
   "devDependencies": {
-    "@types/react-dom": "^16.0.9",
     "babel-plugin-styled-components": "^1.8.0"
   }
 }

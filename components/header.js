@@ -48,7 +48,7 @@ const Title = styled.div`
   }
 `
 
-const Header = () => (
+export const Header = () => (
   <Container>
     <Center>
       <Title>TRIAM UDOM</Title>
@@ -57,5 +57,3 @@ const Header = () => (
     </Center>
   </Container>
 )
-
-export default Header
