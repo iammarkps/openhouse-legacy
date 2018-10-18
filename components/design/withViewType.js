@@ -1,6 +1,11 @@
 import React from 'react'
 import { MOBILE_BREAKPOINT, TABLET_BREAKPOINT } from './index'
 
+export const XS_MOBILE = 'xs-mobile'
+export const MOBILE = 'mobile'
+export const TABLET = 'tablet'
+export const DESKTOP = 'desktop'
+
 function withViewType(Component) {
   return class Container extends React.PureComponent {
     state = { viewType: MOBILE, innerWidth: 0 }
@@ -37,4 +42,4 @@ function withViewType(Component) {
   }
 }
 
-export const enhance = withViewType()
+export const enhance = withViewType

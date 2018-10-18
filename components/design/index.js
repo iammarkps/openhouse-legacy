@@ -1,10 +1,8 @@
-import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 
 /**
  *Color
  */
-
 export const Colors = {
   triamPink: '#ff94c2',
   triamGrey: '#959da5',

@@ -5,6 +5,8 @@ import { Parallax, ParallaxLayer } from 'react-spring'
 import styled from 'styled-components'
 import { beat, fontSize, Tracking } from '../components/design'
 import { Info } from '../components/info'
+import { Clubs } from '../components/clubs'
+import { enhance, MOBILE } from '../components/design/withViewType'
 import 'antd/dist/antd.css'
 
 const ScrollParent = styled.div`
@@ -22,11 +24,14 @@ const Scroll = styled.div`
   width: 100%;
 `
 
-export default class Index extends React.PureComponent {
+class Index extends React.PureComponent {
   render() {
     return (
       <Layout>
-        <Parallax pages={2} ref={ref => (this.parallax = ref)}>
+        <Parallax
+          pages={this.props.viewType === MOBILE ? 4.6 : 3}
+          ref={ref => (this.parallax = ref)}
+        >
           <ParallaxLayer offset={0} speed={0.5}>
             <Header />
           </ParallaxLayer>
@@ -35,11 +40,24 @@ export default class Index extends React.PureComponent {
               <Scroll>S C R O L L</Scroll>
             </ScrollParent>
           </ParallaxLayer>
-          <ParallaxLayer offset={1} speed={0.5}>
+          <ParallaxLayer
+            factor={this.props.viewType === MOBILE ? 1.6 : 1}
+            offset={1}
+            speed={0.5}
+          >
             <Info />
+          </ParallaxLayer>
+          <ParallaxLayer
+            factor={this.props.viewType === MOBILE ? 2 : 1}
+            offset={2}
+            speed={0.5}
+          >
+            <Clubs />
           </ParallaxLayer>
         </Parallax>
       </Layout>
     )
   }
 }
+
+export default enhance(Index)
