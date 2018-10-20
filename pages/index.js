@@ -1,12 +1,15 @@
 import React from 'react'
-import { Header } from '../components/header'
-import { Layout } from '../components/layout'
 import { Parallax, ParallaxLayer } from 'react-spring'
 import styled from 'styled-components'
-import { beat, fontSize, Tracking } from '../components/design'
+
+import { Layout } from '../components/layout'
+import { Header } from '../components/header'
+import { Department } from '../components/department'
 import { Info } from '../components/info'
 import { Clubs } from '../components/clubs'
+
 import { enhance, MOBILE } from '../components/design/withViewType'
+import { beat, fontSize, Tracking } from '../components/design'
 import 'antd/dist/antd.css'
 
 const ScrollParent = styled.div`
@@ -29,7 +32,7 @@ class Index extends React.PureComponent {
     return (
       <Layout>
         <Parallax
-          pages={this.props.viewType === MOBILE ? 4.6 : 3}
+          pages={this.props.viewType === MOBILE ? 6 : 4}
           ref={ref => (this.parallax = ref)}
         >
           <ParallaxLayer offset={0} speed={0.5}>
@@ -41,7 +44,7 @@ class Index extends React.PureComponent {
             </ScrollParent>
           </ParallaxLayer>
           <ParallaxLayer
-            factor={this.props.viewType === MOBILE ? 1.6 : 1}
+            factor={this.props.viewType === MOBILE ? 2 : 1}
             offset={1}
             speed={0.5}
           >
@@ -49,10 +52,16 @@ class Index extends React.PureComponent {
           </ParallaxLayer>
           <ParallaxLayer
             factor={this.props.viewType === MOBILE ? 2 : 1}
-            offset={2}
+            offset={this.props.viewType === MOBILE ? 3 : 2}
             speed={0.5}
           >
             <Clubs />
+          </ParallaxLayer>
+          <ParallaxLayer
+            offset={this.props.viewType === MOBILE ? 4 : 3}
+            speed={0.5}
+          >
+            <Department />
           </ParallaxLayer>
         </Parallax>
       </Layout>

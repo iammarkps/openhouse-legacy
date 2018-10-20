@@ -106,22 +106,18 @@ function generateFontFace(src, family, weight) {
 
 function getFontFace() {
   return `${generateFontFace(
-    require('/static/fonts/NotoSans-Light.ttf'),
+    '/static/fonts/NotoSans-Light.ttf',
     'Noto Sans',
     300
   )}
+    ${generateFontFace('/static/fonts/NotoSans-SemiBold.ttf', 'Noto Sans', 600)}
     ${generateFontFace(
-      require('/static/fonts/NotoSans-SemiBold.ttf'),
-      'Noto Sans',
-      600
-    )}
-    ${generateFontFace(
-      require('/static/fonts/NotoSansThaiUI-Light.ttf'),
+      '/static/fonts/NotoSansThaiUI-Light.ttf',
       'Noto Sans Thai UI',
       300
     )}
     ${generateFontFace(
-      require('/static/fonts/NotoSansThaiUI-SemiBold.ttf'),
+      '/static/fonts/NotoSansThaiUI-SemiBold.ttf',
       'Noto Sans Thai UI',
       600
     )}`

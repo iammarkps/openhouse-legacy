@@ -1,21 +1,8 @@
 import React from 'react'
-import { beat, fontSize, ViewType } from '../components/design'
 import styled from 'styled-components'
 import { Row, Col } from 'antd'
-
-const Title = styled.div`
-  color: white;
-  padding-bottom: ${beat(1)};
-  font-size: ${fontSize(7)};
-  font-weight: 400;
-  font-family: Kanit;
-  ${ViewType.mobile} {
-    font-size: ${fontSize(4)};
-  }
-  ${ViewType.xsMobile} {
-    font-size: ${fontSize(3)};
-  }
-`
+import { beat, fontSize, ViewType } from './design'
+import { Title } from './design/components'
 
 export class Info extends React.Component {
   render() {
