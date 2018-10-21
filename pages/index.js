@@ -28,6 +28,13 @@ const Scroll = styled.div`
 `
 
 class Index extends React.PureComponent {
+  componentDidMount() {
+    console.log(`
+    แต่สิ่งที่ ไม่เปลี่ยน ยังเวียนวน
+    คือความรัก ศักดิ์ตน ทุกสมัย
+    ได้ชื่อว่า ต.อ. ย่อมพอใจ
+    พระเกี้ยวน้อย ยิ่งใหญ่ ตลอดกาล`)
+  }
   render() {
     return (
       <Layout>
@@ -35,6 +42,15 @@ class Index extends React.PureComponent {
           pages={this.props.viewType === MOBILE ? 6 : 4}
           ref={ref => (this.parallax = ref)}
         >
+          <Parallax.Layer
+            offset={1}
+            speed={0}
+            factor={3}
+            style={{
+              backgroundImage: "url('/static/assets/svg/star.svg')",
+              backgroundSize: 'cover'
+            }}
+          />
           <ParallaxLayer offset={0} speed={0.5}>
             <Header />
           </ParallaxLayer>
