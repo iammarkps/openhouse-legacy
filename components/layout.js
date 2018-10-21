@@ -3,7 +3,7 @@ import React from 'react'
 import { TypographicContext, GlobalStyle } from './design'
 
 export const Layout = ({ children }) => (
-  <>
+  <React.Fragment>
     <Head>
       <link
         rel="apple-touch-icon"
@@ -41,5 +41,5 @@ export const Layout = ({ children }) => (
     </Head>
     <GlobalStyle />
     <TypographicContext>{children}</TypographicContext>
-  </>
+  </React.Fragment>
 )

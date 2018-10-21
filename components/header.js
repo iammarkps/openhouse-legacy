@@ -32,9 +32,6 @@ const Title = styled.div`
   color: white;
   padding-left: 100px;
   padding-bottom: ${beat(1)};
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
   font-size: ${fontSize(14)};
   font-weight: 700;
   font-family: ${Fonts.display};
