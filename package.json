@@ -12,13 +12,13 @@
     "export": "next build && next export"
   },
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "antd": "^3.10.1",
-    "next": "^7.0.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-spring": "^5.9.2",
-    "styled-components": "^4.0.2"
+    "@zeit/next-css": "1.0.1",
+    "antd": "3.10.1",
+    "next": "7.0.2",
+    "react": "16.5.2",
+    "react-dom": "16.5.2",
+    "react-spring": "5.9.2",
+    "styled-components": "4.0.2"
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^1.0.0",
