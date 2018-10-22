@@ -1,13 +1,7 @@
 import React from 'react'
-import {
-  beat,
-  fontSize,
-  Fonts,
-  ViewType,
-  Tracking,
-  Colors
-} from '../components/design'
+import { beat, fontSize, Fonts, ViewType } from '../components/design'
 import styled, { keyframes } from 'styled-components'
+import { ParallaxLayer } from 'react-spring'
 
 const fadein = keyframes`
     from {
@@ -46,11 +40,13 @@ const Title = styled.div`
 `
 
 export const Header = () => (
-  <Container>
-    <Center>
-      <Title>TRIAM UDOM</Title>
-      <Title>OPEN HOUSE</Title>
-      <Title>2019</Title>
-    </Center>
-  </Container>
+  <ParallaxLayer offset={0} speed={0.5}>
+    <Container>
+      <Center>
+        <Title>TRIAM UDOM</Title>
+        <Title>OPEN HOUSE</Title>
+        <Title>2019</Title>
+      </Center>
+    </Container>
+  </ParallaxLayer>
 )
