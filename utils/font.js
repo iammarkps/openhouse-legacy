@@ -3,12 +3,12 @@
  * @param {{weight}} object Get all font weight
  */
 
-function getGoogleFont({ name, weight = 400 }) {
-  if (weight === 400) {
-    return `<link href="https://fonts.googleapis.com/css?family=${name}" rel="stylesheet" />`
-  } else {
-    return `<link href="https://fonts.googleapis.com/css?family=${name}:${weight}" rel="stylesheet" />`
-  }
-}
+export function getGoogleFont({ name, weight = 400 }) {
+  let uri = `https://fonts.googleapis.com/css?family=${name}`
 
-console.log(getGoogleFont({ name: 'Montserrat', weight: '300,600' }))
+  if (weight !== 400) {
+    uri += `:${weight}`
+  }
+
+  return <link href={uri} rel="stylesheet" />
+}
