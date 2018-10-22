@@ -9,9 +9,11 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export"
+    "export": "next build && next export",
+    "analyze": "BUNDLE_ANALYZE=both yarn build"
   },
   "dependencies": {
+    "@zeit/next-bundle-analyzer": "^0.1.2",
     "@zeit/next-css": "1.0.1",
     "antd": "3.10.1",
     "next": "7.0.2",
