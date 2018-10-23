@@ -34,7 +34,7 @@ export class Department extends React.PureComponent {
           offset={this.props.viewType === MOBILE ? 6 : 3}
           speed={0.5}
         >
-          <div style={{ paddingTop: '50px' }}>
+          <div style={{ marginTop: '50px' }}>
             <Row>
               <Col span={24}>
                 <CenterTitle>หน่วยงาน</CenterTitle>

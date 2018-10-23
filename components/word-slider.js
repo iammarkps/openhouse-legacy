@@ -22,7 +22,6 @@ export default class extends PureComponent {
   startAnimation() {
     this.animation = setInterval(() => {
       if (window.document.visibilityState === 'hidden') {
-        // tab invisible; pause for one round to avoid flickering
         this.pauseAnimation = true
         return
       }

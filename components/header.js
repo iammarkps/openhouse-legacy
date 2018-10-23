@@ -39,14 +39,18 @@ const Title = styled.div`
   }
 `
 
-export const Header = () => (
-  <ParallaxLayer offset={0} speed={0.5}>
-    <Container>
-      <Center>
-        <Title>TRIAM UDOM</Title>
-        <Title>OPEN HOUSE</Title>
-        <Title>2019</Title>
-      </Center>
-    </Container>
-  </ParallaxLayer>
-)
+export class Header extends React.PureComponent {
+  render() {
+    return (
+      <ParallaxLayer offset={0} speed={0.5}>
+        <Container>
+          <Center>
+            <Title>TRIAM UDOM</Title>
+            <Title>OPEN HOUSE</Title>
+            <Title>2019</Title>
+          </Center>
+        </Container>
+      </ParallaxLayer>
+    )
+  }
+}

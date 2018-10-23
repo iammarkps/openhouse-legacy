@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Row, Col } from 'antd'
-import { beat, fontSize, ViewType } from './design'
 import { Title } from './design/components'
 import TUCMCLogo from './design/logos/tucmc.svg'
 
@@ -12,7 +11,7 @@ const CenterTitle = styled(Title)`
 export class Department extends React.PureComponent {
   render() {
     return (
-      <div style={{ paddingTop: '50px' }}>
+      <div style={{ marginTop: '50px' }}>
         <Row>
           <Col span={24}>
             <CenterTitle>ผังงาน</CenterTitle>
