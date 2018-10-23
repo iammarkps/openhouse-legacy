@@ -13,11 +13,11 @@
     "analyze": "BUNDLE_ANALYZE=both yarn build"
   },
   "dependencies": {
-    "@zeit/next-bundle-analyzer": "^0.1.2",
+    "@zeit/next-bundle-analyzer": "0.1.2",
     "@zeit/next-css": "1.0.1",
     "antd": "3.10.1",
     "next": "7.0.2",
-    "puppeteer": "^1.9.0",
+    "puppeteer": "1.9.0",
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-spring": "5.9.2",
