@@ -32,6 +32,18 @@ const Scroll = () => (
   </ParallaxLayer>
 )
 
+const StarBg = () => (
+  <Parallax.Layer
+    offset={1}
+    speed={0}
+    factor={3}
+    style={{
+      backgroundImage: "url('/static/assets/svg/star.svg')",
+      backgroundSize: 'cover'
+    }}
+  />
+)
+
 class Index extends React.PureComponent {
   componentDidMount() {
     console.log(`
@@ -50,15 +62,7 @@ class Index extends React.PureComponent {
           ref={el => (this.parallax = el)}
         >
           {/* <Cloud /> */}
-          <Parallax.Layer
-            offset={1}
-            speed={0}
-            factor={3}
-            style={{
-              backgroundImage: "url('/static/assets/svg/star.svg')",
-              backgroundSize: 'cover'
-            }}
-          />
+          <StarBg />
           <Header />
           <Scroll viewType={viewType} />
           <Info viewType={viewType} />
