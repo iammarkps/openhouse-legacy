@@ -40,11 +40,13 @@ class Index extends React.PureComponent {
     ได้ชื่อว่า ต.อ. ย่อมพอใจ
     พระเกี้ยวน้อย ยิ่งใหญ่ ตลอดกาล`)
   }
+
   render() {
+    const { viewType } = this.props
     return (
       <Layout>
         <Parallax
-          pages={this.props.viewType === MOBILE ? 7 : 4}
+          pages={viewType === MOBILE ? 7 : 4}
           ref={el => (this.parallax = el)}
         >
           {/* <Cloud /> */}
@@ -58,10 +60,10 @@ class Index extends React.PureComponent {
             }}
           />
           <Header />
-          <Scroll viewType={this.props.viewType} />
-          <Info viewType={this.props.viewType} />
-          <Clubs viewType={this.props.viewType} />
-          <Department viewType={this.props.viewType} />
+          <Scroll viewType={viewType} />
+          <Info viewType={viewType} />
+          <Clubs viewType={viewType} />
+          <Department viewType={viewType} />
         </Parallax>
       </Layout>
     )
