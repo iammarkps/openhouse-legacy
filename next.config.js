@@ -7,7 +7,7 @@ module.exports = withCSS(
     bundleAnalyzerConfig: {
       server: {
         analyzerMode: 'static',
-        reportFilename: '../../bundles/server.html'
+        reportFilename: '../bundles/server.html'
       },
       browser: {
         analyzerMode: 'static',
