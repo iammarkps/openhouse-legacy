@@ -2,13 +2,11 @@ import React, { PureComponent } from 'react'
 import { Transition, animated } from 'react-spring'
 
 export default class extends PureComponent {
-  constructor(props) {
-    super(props)
-    this.children = React.Children.toArray(props.children)
-    this.state = {
-      count: React.Children.count(props.children),
-      currentIndex: 0
-    }
+  children = React.Children.toArray(props.children)
+
+  state = {
+    count: React.Children.count(props.children),
+    currentIndex: 0
   }
 
   componentDidMount() {

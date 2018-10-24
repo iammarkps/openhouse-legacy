@@ -74,7 +74,7 @@ export class Department extends React.PureComponent {
                 <br />
                 <br />
                 <LogoWrapper>
-                  <TUSCLogo />
+                  <img src="/static/logos/aic1.png" height="110" width="110" />
                 </LogoWrapper>
               </Col>
               <Col md={4} offset={2}>
