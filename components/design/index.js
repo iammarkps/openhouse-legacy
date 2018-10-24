@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
+import { PARTICLES_CONFIG } from './config'
 
 /**
  *Color
@@ -151,6 +152,15 @@ export const GlobalStyle = createGlobalStyle`
       ${ViewType.mobile} {
         font-size: ${BASE_FONT_SIZE_XS}
       }
+
+      canvas {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+      }
 }
 
 `
+export { PARTICLES_CONFIG }

@@ -1,5 +1,7 @@
 import React from 'react'
 import { Parallax, ParallaxLayer } from 'react-spring'
+import Particles from 'react-particles-js'
+
 import styled from 'styled-components'
 
 import { Layout } from '../components/layout'
@@ -11,7 +13,7 @@ import { Cloud } from '../components/cloud'
 
 import { enhance, MOBILE } from '../components/design/withViewType'
 import { beat, fontSize, Tracking } from '../components/design'
-import 'antd/dist/antd.css'
+import { PARTICLES_CONFIG } from '../components/design'
 
 const ScrollWrapper = styled.div`
   width: 1;
@@ -26,13 +28,13 @@ const ScrollWrapper = styled.div`
   font-size: ${fontSize(-3)};
 `
 
-const Scroll = () => (
+const Scroll = React.memo(() => (
   <ParallaxLayer offset={0} speed={0.1}>
     <ScrollWrapper>S C R O L L</ScrollWrapper>
   </ParallaxLayer>
-)
+))
 
-const StarBg = () => (
+const StarBg = React.memo(() => (
   <Parallax.Layer
     offset={1}
     speed={0}
@@ -41,8 +43,10 @@ const StarBg = () => (
       backgroundImage: "url('/static/assets/svg/star.svg')",
       backgroundSize: 'cover'
     }}
-  />
-)
+  >
+    {/* <Particles params={PARTICLES_CONFIG} /> */}
+  </Parallax.Layer>
+))
 
 class Index extends React.PureComponent {
   componentDidMount() {

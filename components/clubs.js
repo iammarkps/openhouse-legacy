@@ -1,8 +1,8 @@
 import React from 'react'
 import { Title } from './design/components'
-import { Row, Col } from 'antd'
 import { MOBILE } from '../components/design/withViewType'
 import { ParallaxLayer } from 'react-spring'
+import { Grid, Row, Col } from 'react-flexbox-grid'
 
 const clubsList = [
   'คณิตศาสตร์',
@@ -54,37 +54,39 @@ export class Clubs extends React.PureComponent {
     return (
       <ParallaxLayer
         factor={this.props.viewType === MOBILE ? 2 : 1}
-        offset={this.props.viewType === MOBILE ? 3 : 2}
+        mdOffset={this.props.viewType === MOBILE ? 3 : 2}
         speed={0.5}
       >
         <div style={{ marginTop: '50px' }}>
-          <Row>
-            <Col md={6} offset={1}>
-              <Title>กิจกรรมชมรม</Title>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={5} offset={1}>
-              {first.map(content => (
-                <p>{content}</p>
-              ))}
-            </Col>
-            <Col md={5} offset={1}>
-              {second.map(content => (
-                <p>{content}</p>
-              ))}
-            </Col>
-            <Col md={5} offset={1}>
-              {third.map(content => (
-                <p>{content}</p>
-              ))}
-            </Col>
-            <Col md={5} offset={1}>
-              {fourth.map(content => (
-                <p>{content}</p>
-              ))}
-            </Col>
-          </Row>
+          <Grid fluid>
+            <Row>
+              <Col md={6} mdOffset={1}>
+                <Title>กิจกรรมชมรม</Title>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={5} mdOffset={1}>
+                {first.map(content => (
+                  <p>{content}</p>
+                ))}
+              </Col>
+              <Col md={5} mdOffset={1}>
+                {second.map(content => (
+                  <p>{content}</p>
+                ))}
+              </Col>
+              <Col md={5} mdOffset={1}>
+                {third.map(content => (
+                  <p>{content}</p>
+                ))}
+              </Col>
+              <Col md={5} mdOffset={1}>
+                {fourth.map(content => (
+                  <p>{content}</p>
+                ))}
+              </Col>
+            </Row>
+          </Grid>
         </div>
       </ParallaxLayer>
     )
