@@ -14,6 +14,7 @@ import { Cloud } from '../components/cloud'
 import { enhance, MOBILE } from '../components/design/withViewType'
 import { beat, fontSize, Tracking } from '../components/design'
 import { PARTICLES_CONFIG } from '../components/design'
+import 'antd/dist/antd.css'
 
 const ScrollWrapper = styled.div`
   width: 1;
@@ -43,20 +44,10 @@ const StarBg = React.memo(() => (
       backgroundImage: "url('/static/assets/svg/star.svg')",
       backgroundSize: 'cover'
     }}
-  >
-    {/* <Particles params={PARTICLES_CONFIG} /> */}
-  </Parallax.Layer>
+  />
 ))
 
 class Index extends React.PureComponent {
-  componentDidMount() {
-    console.log(`
-    แต่สิ่งที่ ไม่เปลี่ยน ยังเวียนวน
-    คือความรัก ศักดิ์ตน ทุกสมัย
-    ได้ชื่อว่า ต.อ. ย่อมพอใจ
-    พระเกี้ยวน้อย ยิ่งใหญ่ ตลอดกาล`)
-  }
-
   render() {
     const { viewType } = this.props
     return (

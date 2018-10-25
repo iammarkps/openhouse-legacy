@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import { Row, Col } from 'antd'
 import { Title } from './design/components'
 import { MOBILE } from '../components/design/withViewType'
 import { ParallaxLayer } from 'react-spring'
@@ -38,31 +38,29 @@ export class Info extends React.Component {
         speed={0.5}
       >
         <div style={{ marginTop: '50px' }}>
-          <Grid>
-            <Row>
-              <Col md={6} mdOffset={1}>
-                <Title>แผนการเรียน</Title>
-              </Col>
-            </Row>
-            <Row>
-              <Col md={7} mdOffset={1}>
-                {sciMath.map(content => (
-                  <p>{content}</p>
-                ))}
-              </Col>
-              <Col md={7} mdOffset={1}>
-                {art.map(content => (
-                  <p>{content}</p>
-                ))}
-              </Col>
-              <Col md={7} mdOffset={1}>
-                <p>ภาษา - คณิต</p>
-                {gifted.map(content => (
-                  <p>{content}</p>
-                ))}
-              </Col>
-            </Row>
-          </Grid>
+          <Row>
+            <Col md={6} offset={1}>
+              <Title>แผนการเรียน</Title>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={7} offset={1}>
+              {sciMath.map(content => (
+                <p key={content}>{content}</p>
+              ))}
+            </Col>
+            <Col md={7} offset={1}>
+              {art.map(content => (
+                <p key={content}>{content}</p>
+              ))}
+            </Col>
+            <Col md={7} offset={1}>
+              <p>ภาษา - คณิต</p>
+              {gifted.map(content => (
+                <p key={content}>{content}</p>
+              ))}
+            </Col>
+          </Row>
         </div>
       </ParallaxLayer>
     )
