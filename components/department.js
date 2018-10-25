@@ -5,7 +5,7 @@ import { ParallaxLayer } from 'react-spring'
 import { MOBILE } from '../components/design/withViewType'
 import TUCMCLogo from '../static/logos/tucmc.svg'
 import TUSCLogo from '../static/logos/tusc.svg'
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import { Row, Col } from 'antd'
 
 const Center = styled.div`
   position: absolute;
@@ -35,21 +35,19 @@ export class Department extends React.PureComponent {
           speed={0.5}
         >
           <div style={{ marginTop: '50px' }}>
-            <Grid fluid>
-              <Row>
-                <Col xs={24}>
-                  <CenterTitle>หน่วยงาน</CenterTitle>
-                </Col>
-              </Row>
-              <Row>
-                <Col md={8} mdOffset={8}>
-                  <p>คณะกรรมการนักเรียน</p>
-                  <p>คณะกรรมการกลางงานกิจกรรมพัฒนาผู้เรียน</p>
-                  <p>กลุ่มนักเรียนเอไอซี</p>
-                  <p>สวนพฤกษศาสตร์โรงเรียน</p>
-                </Col>
-              </Row>
-            </Grid>
+            <Row>
+              <Col span={24}>
+                <CenterTitle>หน่วยงาน</CenterTitle>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={8} offset={8}>
+                <p>คณะกรรมการนักเรียน</p>
+                <p>คณะกรรมการกลางงานกิจกรรมพัฒนาผู้เรียน</p>
+                <p>กลุ่มนักเรียนเอไอซี</p>
+                <p>สวนพฤกษศาสตร์โรงเรียน</p>
+              </Col>
+            </Row>
           </div>
         </ParallaxLayer>
         <ParallaxLayer
@@ -57,42 +55,36 @@ export class Department extends React.PureComponent {
           speed={3}
         >
           <Center>
-            <Grid fluid>
-              <Row>
-                <Col md={4} mdOffset={2}>
-                  <br />
-                  <br />
-                  <LogoWrapper>
-                    <TUSCLogo />
-                  </LogoWrapper>
-                </Col>
-                <Col md={4} mdOffset={2}>
-                  <br />
-                  <br />
-                  <LogoWrapper>
-                    <TUCMCLogo />
-                  </LogoWrapper>
-                </Col>
-                <Col md={4} mdOffset={2}>
-                  <br />
-                  <br />
-                  <LogoWrapper>
-                    <img
-                      src="/static/logos/aic1.png"
-                      height="110"
-                      width="110"
-                    />
-                  </LogoWrapper>
-                </Col>
-                <Col md={4} mdOffset={2}>
-                  <br />
-                  <br />
-                  <LogoWrapper>
-                    <TUSCLogo />
-                  </LogoWrapper>
-                </Col>
-              </Row>
-            </Grid>
+            <Row>
+              <Col md={4} offset={2}>
+                <br />
+                <br />
+                <LogoWrapper>
+                  <TUSCLogo />
+                </LogoWrapper>
+              </Col>
+              <Col md={4} offset={2}>
+                <br />
+                <br />
+                <LogoWrapper>
+                  <TUCMCLogo />
+                </LogoWrapper>
+              </Col>
+              <Col md={4} offset={2}>
+                <br />
+                <br />
+                <LogoWrapper>
+                  <img src="/static/logos/aic1.png" height="110" width="110" />
+                </LogoWrapper>
+              </Col>
+              <Col md={4} offset={2}>
+                <br />
+                <br />
+                <LogoWrapper>
+                  <TUSCLogo />
+                </LogoWrapper>
+              </Col>
+            </Row>
           </Center>
         </ParallaxLayer>
       </React.Fragment>
