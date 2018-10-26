@@ -5007,10 +5007,10 @@ react-slick@~0.23.2:
     prettier "^1.14.3"
     resize-observer-polyfill "^1.5.0"
 
-react-spring@6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-6.1.0.tgz#bea4211d0543c13b07c334d374cfec9978b6df24"
-  integrity sha512-7LuX1IrYVz+nECMfn4vqr2IfY6rBHpka1cWYCQ4Wz+PVaTVEuvT0VJhjHmWdr9Bw8j63FSuvTTZX2mb4ZUSc/A==
+react-spring@6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-6.1.2.tgz#34aeb46b1f3c6aa217ca8ea2bfb9e5267af84bab"
+  integrity sha512-Vq52t6ZHl6x2dUhGkbVh7v0tuvO6Z6ju6HojIHx4uLIDVBQCVVgUFehJixWaYGpMSp5pUWy6apI/X60E83A1Wg==
   dependencies:
     "@babel/runtime" "^7.1.2"
 
