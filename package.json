@@ -21,7 +21,7 @@
     "react": "16.6.0",
     "react-dom": "16.6.0",
     "react-particles-js": "2.3.0",
-    "react-spring": "6.1.0",
+    "react-spring": "6.1.2",
     "styled-components": "4.0.2"
   },
   "devDependencies": {
