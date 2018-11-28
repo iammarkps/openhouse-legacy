@@ -22,7 +22,7 @@
     "react-dom": "16.6.0",
     "react-particles-js": "2.3.0",
     "react-spring": "6.1.6",
-    "styled-components": "4.0.3"
+    "styled-components": "4.1.2"
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "1.0.1",
