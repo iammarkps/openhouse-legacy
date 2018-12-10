@@ -15,7 +15,7 @@
   "dependencies": {
     "@zeit/next-bundle-analyzer": "0.1.2",
     "@zeit/next-css": "1.0.1",
-    "antd": "3.10.4",
+    "antd": "3.11.2",
     "next": "7.0.2",
     "puppeteer": "1.10.0",
     "react": "16.6.0",
