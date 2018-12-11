@@ -1,7 +1,7 @@
-import React from 'react'
-import { beat, fontSize, Fonts, ViewType } from '../components/design'
-import styled, { keyframes } from 'styled-components'
-import { ParallaxLayer } from 'react-spring'
+import React from "react";
+import { beat, fontSize, Fonts, ViewType } from "../components/design";
+import styled, { keyframes } from "styled-components";
+import { ParallaxLayer } from "react-spring/dist/addons.cjs";
 
 const fadein = keyframes`
     from {
@@ -10,18 +10,18 @@ const fadein = keyframes`
     to {
         opacity: 1;
     }
-`
+`;
 const Container = styled.div`
   background-color: black;
   animation: ${fadein} 2s;
-`
+`;
 
 const Center = styled.div`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
-`
+`;
 const Title = styled.div`
   color: white;
   padding-left: 100px;
@@ -37,7 +37,7 @@ const Title = styled.div`
     font-size: ${fontSize(5)};
     padding-left: 50px;
   }
-`
+`;
 
 export class Header extends React.PureComponent {
   render() {
@@ -51,6 +51,6 @@ export class Header extends React.PureComponent {
           </Center>
         </Container>
       </ParallaxLayer>
-    )
+    );
   }
 }

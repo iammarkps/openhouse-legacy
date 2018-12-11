@@ -1,6 +1,7 @@
 import React from 'react'
-import { Parallax, ParallaxLayer } from 'react-spring'
+import { Parallax, ParallaxLayer } from 'react-spring/dist/addons.cjs'
 import Particles from 'react-particles-js'
+import 'raf/polyfill'
 
 import styled from 'styled-components'
 

@@ -18,6 +18,7 @@
     "antd": "3.10.4",
     "next": "7.0.2",
     "puppeteer": "1.10.0",
+    "raf": "^3.4.1",
     "react": "16.6.0",
     "react-dom": "16.6.0",
     "react-particles-js": "2.3.0",
