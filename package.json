@@ -15,18 +15,17 @@
   "dependencies": {
     "@zeit/next-bundle-analyzer": "0.1.2",
     "@zeit/next-css": "1.0.1",
-    "antd": "3.10.4",
+    "antd": "3.11.2",
     "next": "7.0.2",
     "puppeteer": "1.10.0",
-    "raf": "^3.4.1",
-    "react": "16.6.0",
-    "react-dom": "16.6.0",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
     "react-particles-js": "2.3.0",
-    "react-spring": "6.1.6",
+    "react-spring": "6.1.10",
     "styled-components": "4.0.3"
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "1.0.1",
-    "babel-plugin-styled-components": "1.8.0"
+    "babel-plugin-styled-components": "1.9.3"
   }
 }
